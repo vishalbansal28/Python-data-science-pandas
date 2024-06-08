@@ -15,7 +15,7 @@ This repository contains a collection of real-world data science tasks completed
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/vishalbansal28/Python-Data-Science-pandas.git
+   git clone https://github.com/vishalbansal28/Python-data-science-pandas.git
    ```
 2. **Install necessary libraries:** 
    ```bash
