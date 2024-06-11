@@ -1,66 +1,47 @@
-## Pandas Data Science Tasks
+## Sales Data Analysis
 
-This repository contains a collection of real-world data science tasks completed using the Python Pandas library. These tasks demonstrate the power and versatility of Pandas for data manipulation, analysis, and visualization.
+This project analyzes sales data from a fictional online store to extract insights and inform business decisions.
 
-**Goal:** To provide practical examples and solutions for common data science problems.
+**Data:**
 
-**Contents:**
+* The data is stored in a directory named "Sales_Data" containing multiple CSV files, each representing sales data for a particular month. 
+* Each CSV file contains the following columns:
+    * `Order ID`: Unique identifier for each order.
+    * `Product`: Name of the product purchased.
+    * `Quantity Ordered`: Number of units of the product ordered.
+    * `Price Each`: Price of each unit of the product.
+    * `Order Date`: Date and time of the order.
+    * `Purchase Address`: Delivery address for the order.
 
-- **Data:** The repository includes various datasets that are used for the tasks. These datasets are representative of real-world scenarios and can be explored and analyzed.
-- **Scripts:** Each task is implemented as a Python script using the Pandas library. The scripts are well-documented, making it easy to understand the code and the underlying logic. 
-- **Output:** The results of each task are presented in a clear and concise manner, often using charts and graphs generated with the help of Matplotlib or other visualization libraries.
-- **README.md:** This file provides an overview of the repository, its contents, and the purpose of the tasks. 
+**Analysis:**
 
-**Getting Started:**
+The project performs the following steps:
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/vishalbansal28/Python-data-science-pandas.git
-   ```
-2. **Install necessary libraries:** 
-   ```bash
-   pip install pandas matplotlib
-   ```
-3. **Explore the data:** Familiarize yourself with the datasets provided in the `data` folder.
-4. **Run the scripts:** Execute the Python scripts to see the results and understand the implementation.
-5. **Modify and experiment:** Feel free to modify the scripts, try different datasets, or explore new data science tasks using the knowledge gained.
+1. **Data merging:** Combines all monthly sales data into a single CSV file.
+2. **Data cleaning:** Removes irrelevant rows, converts data types, and adds derived columns like:
+    * `Month`: Month of the order.
+    * `City`: City of the delivery address.
+    * `Hour`: Hour of the order.
+3. **Exploratory data analysis:** Answers key questions about the sales data:
+    * What was the best month for sales? How much was earned that month?
+    * What city sold the most product?
+    * What time should we display advertisements to maximize likelihood of customer's buying product?
+    * What products are most often sold together?
+    * What product sold the most? Why do you think it sold the most?
+4. **Data visualization:** Creates bar charts and plots to represent the findings visually and make the insights clear.
 
-**Example Tasks:**
+**Tech Stack:**
 
-Here are some examples of the types of tasks you might find in this repository:
+* **Python:** Programming language used for the analysis.
+* **pandas:**  Library for data manipulation and analysis.
+* **os:** Library to interact with the file system.
+* **matplotlib.pyplot:** Library for creating visualizations.
 
-* **Data Cleaning:**
-    * Removing duplicate entries
-    * Handling missing values (NaNs)
-    * Converting data types (e.g., strings to numbers, dates)
-    * Reshaping dataframes 
-* **Exploratory Data Analysis:**
-    * Summarizing data with descriptive statistics
-    * Identifying trends and patterns
-    * Grouping and aggregating data
-    * Creating visualizations (e.g., histograms, scatter plots)
-* **Data Transformation:**
-    * Merging and joining dataframes
-    * Applying functions to data
-    * Filtering and sorting data
-    * Creating new columns based on existing data
-* **Machine Learning:**
-    * Preparing data for machine learning models
-    * Feature engineering
-    * Building and evaluating machine learning models
+**Running the code:**
 
-**Benefits of Using Pandas:**
-
-* **Efficient data manipulation:** Pandas provides powerful tools for handling and transforming data, making data cleaning and preparation a breeze.
-* **Data analysis capabilities:** It offers a wide range of functions for exploring and understanding data, including statistical calculations, aggregations, and filtering.
-* **Visualization integration:** Pandas integrates well with visualization libraries like Matplotlib, making it easy to create informative charts and graphs.
-
-**Contributing:**
-
-Contributions to this repository are welcome! 
-
-* **New tasks:** Add your own data science tasks using the Pandas library.
-* **Improvements:** Refine existing scripts or add new functionalities.
-* **Documentation:** Update the README and script comments for clarity.
-
-Let's explore the world of data science with the power of Pandas!
+1. Ensure you have the required Python libraries installed (`pip install pandas matplotlib`).
+2. Place the "Sales_Data" directory in the same directory as the Python script.
+3. Run the Python script.
+4. The script will generate the following outputs:
+    * A consolidated CSV file named "all_data_copy.csv".
+    * Plots and visualizations showing the key findings.
